@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Lekcja 4. Operatory matematyczne i logiczne.</h1>
+
+        <h2>Operatory</h2>
+        <div class="opisy">
+            <p><b>Operatory matematyczne</b> to nic innego jak elementy znane doskonale z matematyki,
+                pozwalające na porównywanie dwóch wartości. Do znanych operatorów zaliczamy:</p>
+
+
+                <ul>
+                    <li>znak większości (>),</li>
+                    <li>mniejszości (<),</li>                    
+                    <li>większe lub równe (>=),</li>
+                    <li>mniejsze lub równe (<=),</li>
+                    <li>równe (==) oraz różne (!=).</li>
+                </ul>
+
+                <p><b><u>Oraz operatory logiczne:</u></b></p>
+
+                <ul>
+                    <li>Logiczne „i” (<b>&&</b>) (wszystkie warunki muszą być spełnione)</li>
+                    <li>Logiczne „lub” (<b>||</b>) (jeden z warunków musi być spełniony)</li>
+                    <li>Negacja (wykrzyknik) <b>!</b>true = false; (zmienia wartość logiczną na przeciwną)</li>
+                </ul>
+                <br>
+                <p><i>Przy ich pomocy możemy zbudować proste i złożone zdania logiczne. Warto dodać, że
+                    takie zdania mają wartość logiczną prawda/fałsz (true/false). Dzięki temu możemy
+                    przypisać je do jednego z poznanych typów zmiennych.</i></p>
+
+                <p>Oczywiście chodzi o typ bool.</p>
+        </div>
+        <div class="opisy">
+            <p><b>Przykład:</b></p>
+            <pre>
+bool wynik = 5 > 3;
+Console.WriteLine( wynik );
+wynik = "ala" == "ma kota";
+Console.WriteLine( wynik );
+            </pre>
+
+            <p>Należy zwrócić uwagę na znak dla operatora równości == i uważać, aby nie mylić go z
+                operatorem przypisania =. Dwie instrukcje x = y oraz x == y to dwie różne operacje.
+                Pierwsza z nim przypisuje wartość y do x, natomiast druga porównuje ich wartość.</p>
+
+            <p>Aby możliwe było porównywanie dwóch wartości, muszą być one tego samego typu.
+                Nie można porównać np. zmiennej typu string „Ala” ze zmienną typu int 5. Jest to
+                nielogiczne.</p>
+               
+             <p><b>Przykład:</b></p>  
+             <pre>
+int a = 5;
+int b =7;
+bool czyRowne = a == b; //false
+bool czyRozne = a != b; //true
+
+bool czyWieksza = a > b; //false
+bool czyMniejsza = a < b; // true
+             </pre>     
+  
+        </div>
+
+        <h2>Operator trójargumentowy</h2>
+        <div class="opisy">
+            <p>Możemy użyć operatora trójargumentowego żeby zamiast wyświetlania wartości True
+                / False jako wynik, wyświetlić dowolny tekst.</p>
+            
+            <p>Operator ma następującą składnię:</p>
+            <p><b>[wyrażenie_logiczne] ? [wykonaj to, gdy wyrażenie jest prawdziwe] : [wykonaj to,
+            gdy nieprawdziwe]</b></p>
+        </div>
+
+        <div id="przyciskupp">
+            <p class="bolder">Przykład:</p>
+            <button id="button">Copy</button>
+        </div>
+        <div class="console">
+            <pre id="myInput">
+MessageBox.Show($"Czy trójkąt jest prostokątny? {(czyProstokatny ? "Tak" :
+"Nie")} ", "Wynik", MessageBoxButtons.OK);
+            </pre>
+        </div>
+
+        <h2><u>Inkrementacja i dekrementacja.</u></h2>
+        <div class="opisy">
+            <p>Inkrementacja (czyli zwiększanie) lub dekrementacja (zmniejszanie) wartości o jeden
+                jest częstym zadaniem w programowaniu.</p>
+            
+            <p>W standardowy sposób możemy to zrobić tak:</p>
+            <p>int liczba = liczba + 1; // do naszej liczby przypisujemy jawnie 1</p>
+            <p>Możemy ten zapis uprościć:</p>
+            <p>Int liczba += 1; // przy pomocy operatora += dodajemy nową wartość do naszej
+                zmiennej pomijając odwołanie się do niej po prawej stronie zapisu.</p>
+            <p>C # ma dwa operatory do tego typu działań, które upraszczają jeszcze bardziej ten
+                zapis. Są to ++ i --.</p>
+            
+            <p>Operatorów inkrementacji i dekrementacji używa się tylko na typach liczbowych, czyli
+                int, float, double itd. Wykorzystuje się je głównie w pętlach, który poznamy za kilka
+                zajęć. <b>Składnia:</b></p>
+            <pre>
+[zmienna_typu_liczbowego]++ //inkrementuje o 1
+[zmienna_typu_liczbowego]-- //dekrementuje o 1
+            </pre>
+
+            <p><b>Przykład:</b></p>
+            <pre>
+int liczba =5;
+liczba++; //liczba wynosi teraz 6
+liczba--; //liczba wynosci teraz 5;
+            </pre>
+
+            <br><br>
+            <b>Uwaga</b>
+            <p><b>Operator inkrementacji i dekrementacji może występować przed lub po zmiennej.</b>
+                Gdy występuje przed zmienną, zmiana jej wartości nastąpi w danej instrukcji. Jeżeli
+                występuje po zmiennej, zmiana wartość wystąpi dopiero w kolejnej instrukcji.</p>
+
+                <br>
+        </div>
+
+
+
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    <div id="stopka">
+
+    </div>
+</body>
+<script>
+    function copyFunction() {
+        const copyText = document.getElementById("myInput").textContent;
+        const textArea = document.createElement('textarea');
+        textArea.textContent = copyText;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand("copy");
+    }
+
+document.getElementById('button').addEventListener('click', copyFunction);
+</script>
+</html> -->

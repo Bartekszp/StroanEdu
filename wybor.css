@@ -1,0 +1,125 @@
+body{
+    background-image: url(light-grey-dots-background_78370-2583.jpg);
+    background-size: 15%;
+}
+
+#header
+{
+    height: 20%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#main /*mniejsze niz 1500 responsywna*/
+{
+    width: 1500px;
+    height: 80%;
+    margin: 0 auto;
+}
+.wybor
+{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+
+    width: 25%;
+    float: left;
+    margin-bottom: 15px;
+    /*outline: 1px solid red;*/
+    /*https://iconduck.com/icons/27153/c-sharp-c*/
+}
+.obrazek
+{
+    text-align: center;
+    background-color: rgb(206, 206, 206);
+    box-shadow: 10px 50px 100px rgb(0, 0, 0);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: inset 0px -5px 50px rgb(110, 110, 110);
+}
+.obrazek > img
+{
+    width: 300px;
+    /*outline: 1px solid salmon;*/
+}
+.cart
+{
+    width: 350px;
+    outline: 1px solid rgb(110, 110, 110) ;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-radius: 15px;
+    
+}
+.opis
+{
+    height: 200px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+h1
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+p
+{
+    text-align: justify;
+    font-size: 17px;
+}
+
+#niedostepne 
+{
+    filter: opacity(50%) grayscale(50%);
+    cursor: not-allowed;
+}
+
+.wybor:hover
+{
+    top: -10px;
+}
+
+@media screen and (max-width: 1500px) {
+    #main {
+      width: 1100px;
+
+    }
+    .wybor
+    {
+        width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    #main {
+      width: 715px;
+
+    }
+    .wybor
+    {
+        width: 50%;
+    }
+    #header
+    {
+        font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    #main {
+      width: 300px;
+
+    }
+    .wybor
+    {
+        width: 100%;
+    }
+    #header
+    {
+        font-size: 12px;
+        width: auto;
+    }
+    .cart
+    {
+        width: 100%;
+    }
+  }

@@ -1,0 +1,256 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*background-color: #454545;*/
+    background-size: 15%;
+    background-image: url(logalang1.png);
+    /*background: linear-gradient(100deg, #273063,#215858);*/
+    
+}
+/*=========================*/
+.nav
+{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(190, 190, 190);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.nav a:not(.closebtn)
+{
+    outline: 1px solid black;
+    margin-bottom: 1px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn
+{
+    outline: 1px solid black;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    padding-right: 10px;
+}
+
+.nav a:hover
+{
+    color: #f1f1f1;
+    padding-left: 10px;
+    background-color: rgb(170, 170, 170)
+}
+.nav .closebtn {
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+#openMenuBut
+{
+    outline: 1px solid rgb(0, 0, 0);
+    background-color: #252525;
+    left: -2px;
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+#openMenuBut:hover
+{
+    width: 60px;
+    background-color: #03ff5b;
+    color: #303030;
+    transition: 0.5s;
+}
+
+
+
+/*=========================*/
+
+#main{
+    width: 80%;
+    margin-left: 10%;
+    /*outline: 1px solid red;*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0 0 7px 1px #7d7d7d;
+    transition: margin-left .5s;
+}
+p
+{
+    text-align: justify;
+}
+.opisy
+{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 20px;
+    line-height: 25px;
+}
+h1
+{
+    padding-top: 50px;
+    text-align: center;
+    background: linear-gradient(to right, #f32170, #5326cf,#cf23cf, #ad0cb0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h2
+{
+    margin-left: 18%;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+#przyciskupp
+{
+    max-width: 500px;
+    margin-bottom: 0px;
+    margin: 0 auto;
+    height: auto;
+    
+    text-align: right;
+}
+.console
+{
+    max-width: 500px;
+    height: auto;
+    
+    margin: 0 auto;
+    background-color: #252525;
+    color: aliceblue;
+    font-size: large;
+    
+    
+}
+
+pre
+{
+    text-align: left;
+    overflow: auto;
+    margin: 0px;
+}
+ul > li{
+    list-style-type:disc;
+}
+
+#specjality > li{
+    font-weight: bold;
+}
+#specjality > li > p{
+    font-weight:lighter;
+}
+#lineheight
+{
+    line-height: 40px;
+}
+
+textarea {
+    position: absolute;
+    left: -100%;
+}
+button
+{
+    background-color: #252525;
+    border: none;
+    color: aliceblue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+button:hover
+{
+    color:#ff00b7;
+    background-color: #303030;
+}
+button:focus
+{
+    color:#03ff5b;
+    background-color: #303030;
+}
+
+.komentarzcolor
+{
+    color:#649448;
+}
+.programcolor
+{
+    color:#3cbcad;
+}
+.consolecolor
+{
+    color:#95dafc;
+}
+.funkcjacolor
+{
+    color:#dcdcaa;
+}
+.textcolor
+{
+    color:#ad7b67;
+}
+.voidcolor
+{
+    color:#4698d2;
+}
+
+.bolder
+{
+    font-weight: bold;
+}
+
+#stopka
+{
+    height: 100px;
+}
+strong{
+    color: red;
+}
+
+#legenda
+{
+    text-align: left;
+    font-size: large;
+    background-color: rgb(221, 221, 221);
+    padding: 3px;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    box-shadow: 0px 0px 27px 7px rgba(124,124,124,0.75);
+-webkit-box-shadow: 0px 0px 27px 7px rgba(124,124,124,0.75);
+-moz-box-shadow: 0px 0px 27px 7px rgba(124,124,124,0.75);
+}
+
+@media screen and (min-width: 800px) {
+    #main {
+        width: 80%;
+        margin-left: 10%;
+    }
+  }
+
+@media screen and (max-width: 799px) {
+    #main {
+        width: auto;
+        margin: 0;
+    }
+}

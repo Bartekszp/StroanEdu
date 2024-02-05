@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Lekcja 6. Switch</h1>
+
+            <div class="opisy">
+                <p>Podobną rolę jak instrukcja If pełni inna instrukcja warunkowa - Switch. Sprawdza się
+                    w sytuacji, gdy program komputerowy powinien w odpowiedni sposób reagować na
+                    proste warunki w postaci pojedynczej wartości zmiennej. W zależności od wartości tej
+                    zmiennej, wykona się inna część programu. Warto wtedy użyć instrukcji
+                    wielowarunkowej switch..case.
+                    Początkowo składnia polecenia switch..case może się wydać skomplikowana. Jednak
+                    po jej przeanalizowaniu, okazuje się, że jej budowa jest przejrzysta i uporządkowana, a
+                    sposób użycia jest intuicyjny.</p>
+            </div>
+
+            <h2>Składnia polecenia Switch:</h2>
+            <div class="opisy">
+<pre>
+switch (wyrażenie)
+{
+case wartość wyrażenia:
+    polecenie lub polecenia;
+    break;
+case druga możliwość:
+    polecenie lub polecenia;
+    break;
+default:
+    polecenie lub polecenia;
+    break; //opcjonalnie}
+</pre>
+
+            <div id="legenda">
+                <ul>
+                    <li><b>switch</b> - nazwa instrukcji</li>
+                    <li><b>wyrażenie</b> - wyrażenie którego wartość będzie sprawdzana</li>
+                    <li><b>case wartość zmiennej/wyrażenia</b> - wejście w instrukcję następuje gdy wartość
+                        zmiennej zgadza się z wyrażeniem(odpowiednik if). Należy pilnować żeby dwa
+                        przypadki case nie sprawdzały tej samej wartości, ponieważ jest to błąd.</li>
+                    <li><b>break</b> - słowo kończące instrukcje, jeżeli warunek został wykonany to nie ma potrzeby
+                        sprawdzać kolejnych warunków</li>
+                    <li><b>default</b> - instrukcja domyślna, czyli taka która wykona się jeżeli nie wydarzy się żaden
+                        wcześniejszy warunek (odpowiednik else). break i default są opcjonalne.</li>
+                </ul>
+            </div>
+            
+
+            </div>
+
+
+            <div id="przyciskupp">
+                <button id="button">Copy</button>
+            </div>
+            <div class="console">
+                <pre id="myInput">
+static void Main(string[] args)
+{
+    Console.WriteLine("Jaką ocenę dostałeś?");
+    char grade = char.Parse(Console.ReadLine());
+    switch (grade)
+    {
+        case '5':
+        case '4':
+            Console.WriteLine("Bardzo dobrze");
+            break;
+        case '3':
+            Console.WriteLine("Nieźle");
+            break;
+        case '2':
+            Console.WriteLine("Lepiej to popraw!");
+            break;
+        case '1':
+            Console.WriteLine("Nie zdasz!");
+            break;
+        default:
+            Console.WriteLine("Nieprawidłowa ocena");
+            break;
+    }
+}
+                </pre>
+            </div> 
+        <br>
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
