@@ -90,9 +90,17 @@ body{
     width: 80%;
     margin-left: 10%;
     /*outline: 1px solid red;*/
-    background-color: rgb(255, 255, 255);
-    box-shadow: inset 0 0 7px 1px #7d7d7d;
+    background-color: #242424;
     transition: margin-left .5s;
+    color: #d8d8f6;
+    -webkit-box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
+
+    border-radius: 25px;
+    outline: 10px solid rgb(46, 46, 46);
+    font-size: larger;
+
 }
 p
 {
@@ -105,7 +113,27 @@ p
     margin-right: 20%;
     font-size: 20px;
     line-height: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 7px;
+    background-color: rgb(27, 27, 27);
+    outline: 2px solid #008f32;
+    
+    
 }
+table{
+    width: auto;
+    border-collapse: collapse;
+    height: 600px;
+  }
+
+#przyciskupp > p{
+    color: #008f32;
+    position: relative;
+    bottom: -30px;
+    left: -10px;
+}
+
 h1
 {
     padding-top: 50px;
@@ -120,6 +148,7 @@ h2
     margin-left: 18%;
     padding-bottom: 10px;
     padding-top: 50px;
+    color: #00a83b;
 }
 #przyciskupp
 {
@@ -136,9 +165,10 @@ h2
     height: auto;
     
     margin: 0 auto;
-    background-color: #252525;
+    background-color: #121212;
     color: aliceblue;
     font-size: large;
+    margin-bottom: 8px;
     
     
 }
@@ -170,21 +200,23 @@ textarea {
 }
 button
 {
-    background-color: #252525;
+    background-color: #121212;
     border: none;
     color: aliceblue;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    bottom: -1px;
+    position: relative;
 }
 button:hover
 {
     color:#ff00b7;
-    background-color: #303030;
+    background-color: #000000;
 }
 button:focus
 {
     color:#03ff5b;
-    background-color: #303030;
+    background-color: #1a1a1a;
 }
 
 .komentarzcolor
