@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="cs.css">
 </head>
 <body>
+    <div class="nav" id="navid">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cs.html">1. Wstęp do języka C#</a>
+        <a href="cs2.html">2. Zmienne i stałe</a>
+        <a href="cs3.html">3. Operacje matematyczne</a>
+        <a href="cs4.html">4. Operatory logiczne</a>
+        <a href="cs5.html">5. Instrukcja warunkowa IF</a>
+        <a href="cs6.html">6. Switch</a>
+        <a href="cs7.html">7. Pętle</a>
+        <a href="cs8.html">8. Tablice</a>
+        <a href="cs9.html">9. Metody</a>
+        <a href="cs10.html">10. Klasy</a>
+
+    </div>
+
+    <span onclick="openNav()" id="openMenuBut">
+        Menu
+    </span>
+
+    
     <div id="main">
         <h1>Lekcja 5. Instrukcja warunkowa IF.</h1>
 
@@ -21,7 +41,7 @@
             <p>Instrukcja ta posiada kilka wariantów. W języku C# najprostsza składnia wygląda tak:</p>
         </div>
 
-
+        <br>
         <div class="console">
             <pre id="myInput">
 if (wyrażenie logiczne) //<--true
@@ -31,9 +51,12 @@ if (wyrażenie logiczne) //<--true
 }
             </pre>
         </div> 
+        <br>
+        <br>
         <div class="opisy">
             <p>Bardziej zaawansowana wersja, zakładająca istnienie kilku możliwych wariantów:</p>
         </div>
+        <br>
 
 
         <div class="console">
@@ -56,7 +79,7 @@ else // we wszystkich innych przypadkach wykona się ten kawałek kodu
             </pre>
         </div>
 
-<br><br><br><br>
+<br><br>
 
         <div id="przyciskupp">
             <p class="bolder">Przykład:</p>
@@ -90,7 +113,7 @@ Console.WriteLine(liczba1);
             <b>Przykład w pseudokodzie:</b>
             <p>Na prezydenta może kandydować ktoś, kto ma 35 lat i zebrał 100 000 głosów.</p>
         </div>
-
+        <br>
         <div class="console">
             <pre id="myInput3">
 if( czy masz 35 lat? )
@@ -135,6 +158,7 @@ x++; <strong><- Błąd</strong>! Zmienna x jest tu niedostępna!
 
     </div>
     <script src="script.js"></script>
+    <script src="scriptCopy.js"></script> 
 </body>
 
 </html>
