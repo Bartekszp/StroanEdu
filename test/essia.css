@@ -1,0 +1,158 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efebfc;
+    background-size: 15%;
+}
+
+#header {
+
+    background: linear-gradient(to right, #f32170, #5326cf, #cf23cf, #ad0cb0);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    padding: 20px;
+}
+
+#nav {
+    background-color: #6d40fe;
+    box-shadow: 0 0 15px #000000;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s ease;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    background-color: #ffd404;
+    border-radius: 15px;
+    color: black;
+}
+
+#menu-join {
+
+    text-align: center;
+    padding: 20px;
+}
+
+#Button {
+    background-color: #ffd404;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px #000000;
+}
+
+#Button:hover {
+    background-color: #c2a202;
+    border-radius: 20px;
+}
+
+#content {
+    width: 100%;
+    height: auto;
+}
+
+#forwho {
+    margin: auto;
+    margin-top: 40px;
+    width: 1400px;
+    height: 150px;
+}
+
+.person {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+#whywe {
+    margin: auto;
+    margin-top: 80px;
+    width: 1650px;
+    height: 600px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    box-shadow: 0 0 15px #000000;
+}
+
+#whywe-desc {
+    width: 30%;
+    height: 100%;
+    outline: 1px solid black;
+    float: left;
+}
+
+#whywe-title {
+    width: 70%;
+    height: 10%;
+    border-bottom: 1px solid black;
+    float: left;
+}
+
+#whywe-recom {
+    width: 70%;
+    height: 80%;
+    float: left;
+}
+
+#whywe-footer {
+    width: 70%;
+    height: 10%;
+    border-top: 1px solid black;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2,
+h3 {
+    width: 80%;
+    padding-left: 10px;
+}
+
+p {
+    width: 80%;
+    padding-left: 10px;
+
+}
+
+#tytul {
+    width: 100%;
+    padding-left: 0px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1400px) {
+    #menu-forwho {
+        width: 100%;
+    }
+
+    .person {
+        width: 50%;
+    }
+
+    #whywe {
+        margin-top: 160px;
+        width: 95%;
+    }
+
+}

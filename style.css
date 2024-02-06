@@ -2,6 +2,7 @@ body{
     background-image: url("light-grey-dots-background_78370-2583.jpg");
     background-size: 15%;
     margin: 0px;
+    font-family: "Roboto", sans-serif;
     
 }
 
@@ -67,7 +68,35 @@ body{
     height: 100%;
     outline: 1px solid rgb(0, 255, 157);
     float: left;
+
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    
 }
+
+.person-space
+{
+    height: 80%;
+    width: 80%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.person-picture
+{
+    width: 30%;
+    float: left;
+}
+
+.person-name
+{
+    text-align: center;
+    width: 70%;
+    float: left;
+}
+
 #whywe
 {
     margin: auto;
