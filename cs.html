@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 <body>
     <div class="nav" id="navid">
+
+        <div id="divdlaprzycisku">
+            <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <label for="themeToggle" class="checkbox-label">
+                 <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="cs.html">1. Wstęp do języka C#</a>
         <a href="cs2.html">2. Zmienne i stałe</a>
@@ -25,7 +36,7 @@
     <span onclick="openNav()" id="openMenuBut">
         Menu
     </span>
-
+    
 
     <div id="main">
         <h1>Lekcja 1. Wstęp do języka C# i środowiska Visual Studio Community</h1>
@@ -138,6 +149,7 @@
     <div id="stopka">
 
     </div>
+    <script src="motivetheme.js"></script> 
     <script src="script.js"></script>
     <script src="scriptCopy.js"></script> 
 </body>

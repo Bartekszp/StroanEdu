@@ -4,13 +4,24 @@ body{
     background-size: 15%;
     background-image: url(logalang1.png);
     /*background: linear-gradient(100deg, #273063,#215858);*/
-    
 }
 
 
 :root
 {
-    
+    --background-color:#ffffff;
+    --font-color1: #000000;
+    --opisy-bg: rgb(216, 216, 216);
+
+    --nav-bg:rgb(190, 190, 190);
+    --nav-hover-a: #f1f1f1;
+    --nav-hover-bg:rgb(170, 170, 170);
+
+    --legenda-bg: rgb(221, 221, 221);
+
+    --console-bg: #252525;
+
+    --buttonchangecolor: #525252;
 }
 .dark-theme
 {
@@ -21,6 +32,12 @@ body{
     --nav-bg:rgb(36, 36, 36);
     --nav-hover-a: #3cbd00;
     --nav-hover-bg:rgb(88, 88, 88);
+
+    --legenda-bg: rgb(59, 59, 59);
+
+    --console-bg: #121212;
+
+    --buttonchangecolor: #111111;
 }
 
 
@@ -38,7 +55,7 @@ body{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(36, 36, 36);
+    background-color: var(--nav-bg);
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -66,9 +83,9 @@ body{
 
 .nav a:hover
 {
-    color: #3cbd00;
+    color: var(--nav-hover-a);
     padding-left: 10px;
-    background-color: rgb(88, 88, 88)
+    background-color: var(--nav-hover-bg);
 }
 .nav .closebtn {
     outline: none;
@@ -113,9 +130,9 @@ body{
     width: 80%;
     margin-left: 10%;
     /*outline: 1px solid red;*/
-    background-color: #242424;
+    background-color: var(--background-color);
     transition: margin-left .5s;
-    color: #d8d8f6;
+    color: var(--font-color1);
     -webkit-box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
     box-shadow: inset 0px 0px 41px 0px rgba(66, 68, 90, 1);
@@ -139,7 +156,7 @@ p
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 7px;
-    background-color: rgb(27, 27, 27);
+    background-color: var(--opisy-bg);
     outline: 2px solid #008f32;
     
     
@@ -196,7 +213,7 @@ h2
     height: auto;
     
     margin: 0 auto;
-    background-color: #121212;
+    background-color: var(--console-bg);
     color: aliceblue;
     font-size: large;
     margin-bottom: 8px;
@@ -242,7 +259,7 @@ button
 button:hover
 {
     color:#ff00b7;
-    background-color: #000000;
+    background-color: var(--font-color1);
 }
 button:focus
 {
@@ -274,6 +291,10 @@ button:focus
 {
     color:#4698d2;
 }
+.ifcolor
+{
+    color: #b57cb0;
+}
 
 .bolder
 {
@@ -292,7 +313,7 @@ strong{
 {
     text-align: left;
     font-size: large;
-    background-color: rgb(59, 59, 59);
+    background-color: var(--legenda-bg);
     padding: 3px;
     border-radius: 8px;
     width: 80%;
@@ -316,4 +337,54 @@ strong{
         width: auto;
         margin: 0;
     }
+}
+
+/*dark/light theme*/
+* {box-sizing: border-box;}
+
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--buttonchangecolor);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+#divdlaprzycisku
+{
+    width: auto;
+    float: left;
+    position: relative;
+    bottom: 45px;
+    left: 10px;
 }
