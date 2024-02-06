@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Lekcja 10. Wstęp do OOP</h1>
+
+
+        <div class="opisy">
+            <p><b>Klasa</b> to pewnego rodzaju szablon do tworzenia obiektów.
+                Zawiera zbiór własności (zmiennych) oraz zachowań (metod) opisujących dany obiekt
+                klasy.</p>
+
+
+            <p><b>Obiekt</b> – tak jak klasa jest szablonem, przepisem jakiejś rzeczy, tak obiekt jest to
+                stworzony na podstawie tego szablonu konkretny element. Obiekt jest zatem
+                egzemplarzem danej klasy, technicznie używa się także stwierdzenia, że obiekt jest
+                instancją klasy.</p>
+
+            <p>Wyobraźmy sobie inną klasę – Pracownik. Pracowników mogą charakteryzować takie
+                dane jak imię, nazwisko, data urodzenia, adres zamieszkania czy zarobki. Klasa
+                Pracownik jedynie wyszczególnia (definiuje) dane opisujące pracowników, a obiektami
+                tej klasy są konkretni pracownicy.</p>
+        </div>
+        <h2>Nazewnictwo klas</h2>
+        <div class="opisy">
+            <p>Nazwa klasy powinna wprost mówić, jakie obiekty będzie można dzięki niej stworzyć
+                Jeśli obiektami mają być ludzie, to dobrą nazwą dla takiej klasy jest wyraz <b>Człowiek</b></p>
+            <p>Obok obowiązkowych zasad dotyczących nazewnictwa w C# (takich samych jak w
+                przypadku nazw zmiennych i metod), istnieją dodatkowe zalecane standardy odnośnie
+                nazywania klas. Zgodnie z tymi zaleceniami, nazwy klas powinno się tworzyć przy
+                pomocy rzeczowników lub rzeczowników z przymiotnikami (zazwyczaj w liczbie
+                pojedynczej). Ponadto zaleca się, aby nazwy klas zaczynać się z dużej litery, a jeśli
+                nazwa ma kilka słów, kolejne słowa także powinny zaczynać się z dużej litery, np.
+                <b>WysokiCzlowiek</b>, jest to tak zwany <b>PascalCase</b>.</p>
+
+        </div>
+        <h2>Modyfikatory dostępu</h2>
+        <div class="opisy">
+            <p>W C# mamy cztery podstawowe modyfikatory dostępu:</p>
+            <ul>
+                <li>public – dostęp do elementów wszędzie,</li>
+                <li>internal – dostępność w ramach jednego projektu w solucji (w sytuacji, gdyby
+                    projektów było więcej niż jeden),</li>
+                <li>protected – prywatne poza klasą, ale dostępne dla klas pochodnych</li>
+                <li>private – dostęp do elementów tylko wewnątrz klasy</li>
+            </ul>
+        </div>
+
+        <h2>Tworzenie klasy</h2>
+        <div class="console">
+            <pre id="myInput">
+ModyfikatorDostepu class NazwaKlasy
+{
+    Własności
+    Metody
+}
+            </pre>
+        </div>
+        <div id="przyciskupp">
+            <p class="bolder">Przykład:</p>
+            <button id="button1">Copy</button>
+        </div>
+        <div class="console">
+            <pre id="myInput1">
+public class Osoba
+{
+    // własności klasy
+    public string Imie;
+    public string Nazwisko;
+    // metoda klasy
+    public void PustaMetodaKlasy()
+    }
+    {
+}
+                </div>
+
+
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="script.js"></script>
+    <script src="scriptCopy.js"></script> 
+</body>
+</html>
+
