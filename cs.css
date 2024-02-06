@@ -6,6 +6,29 @@ body{
     /*background: linear-gradient(100deg, #273063,#215858);*/
     
 }
+
+
+:root
+{
+    
+}
+.dark-theme
+{
+    --background-color:#242424;
+    --font-color1: #d8d8f6;
+    --opisy-bg: rgb(27, 27, 27);
+
+    --nav-bg:rgb(36, 36, 36);
+    --nav-hover-a: #3cbd00;
+    --nav-hover-bg:rgb(88, 88, 88);
+}
+
+
+
+
+
+
+
 /*=========================*/
 .nav
 {
@@ -130,6 +153,11 @@ table{
     height: 40px;
   }
 
+#tablicatable
+{
+    width: 100%;
+}
+  
 #przyciskupp > p{
     color: #008f32;
     position: relative;
