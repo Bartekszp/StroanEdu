@@ -120,6 +120,9 @@ nav a:hover {
     height: auto;
     outline: 1px solid rgb(255, 0, 0);
     background-color: rgb(250, 250, 250);
+    border-radius: 50% 50% 0% 0% / 2% 2% 0% 0% ;
+    padding-top: 20px;
+    margin-top: 30px;
 }
 #menu-forwho
 {
@@ -262,14 +265,18 @@ nav a:hover {
 .recomendation img
 {
     padding: 20px;
+    height: 50px;
+    width: 50px;
 }
 .recomendation p
 {
     padding-left: 20px;
+    padding-right: 20px;
 }
 .recomendation h4
 {
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 
