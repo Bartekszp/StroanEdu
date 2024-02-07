@@ -11,12 +11,12 @@ body{
     width: 100%;
     height: 50px;
     margin: 0;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     background-color:whitesmoke;
 }
 #nav
 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: auto;
     height: 100px;
     border-bottom-left-radius: 25px;
@@ -25,6 +25,8 @@ body{
     display: flex;
 	justify-content: center;
 	align-items: center;
+
+    box-shadow: 0px 0px 51px -10px rgba(66, 68, 90, 1);
 }
 
 #nav-lewy
@@ -70,6 +72,7 @@ nav {
     top: 50%;  
     left: 50%;  
     transform: translate(-50%, -50%);
+    
 }
 
 nav a {
@@ -92,37 +95,87 @@ nav a:hover {
     margin: auto;
     margin-top: 40px;
     /*width: 1600px;*/
-    width: 80%;
-    position: relative;
-    padding-top: 40%;
-    outline: 1px solid blue;
+    width: 70%;
+    /* padding-top: 40%; */
+    height: 600px;
+    /* outline: 1px solid blue; */
 
-    position: relative;
 }
+#menu-join-describe
+{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    word-break: break-word;
+
+    
+}
+#menu-join-describe h1{
+    /* font-size: 40px; */
+    padding-top: 30px;
+    font-size: 3vw;
+}
+#menu-join-describe p{
+    padding-top: 20px;
+    /* font-size: 25px; */
+}
+
+#menu-join-photo
+{
+    width: 50%;
+    float: left;
+}
+#menu-join-photo img
+{
+    width: 100%;
+    padding-top: 30px;
+}
+#menu-join-describe-buttoncenter
+{
+    width: 100%;
+    text-align: center;
+}
+
+
 #ButtonStart
 {
     height: 50px;
-    width: 150px;
+    width: 240px;
     background-color: rgba(255, 255, 255, 0.432);
-    border: 1px solid;
+    /* border: 1px solid; */
     border-color: grey;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
-
-    position: absolute;  
+    margin-top: 20px;
+    border-radius: 25px;
+    font-size: 25px;
+    background-color: #ffd404;
+    border: 2px solid #e0bb00;
+    
+    
+    /* margin-left: 40%; */
+    /* position: absolute;  
     top: 50%;  
     left: 50%;  
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
+#ButtonStart:hover
+{
+    background-color: #e0bb00;
+}
+
+
 #content
 {
     width: 100%;
     height: auto;
-    outline: 1px solid rgb(255, 0, 0);
+    /* outline: 1px solid rgb(255, 0, 0); */
     background-color: rgb(250, 250, 250);
     border-radius: 50% 50% 0% 0% / 2% 2% 0% 0% ;
     padding-top: 20px;
     margin-top: 30px;
+
+    box-shadow: 0px 0px 51px -10px rgba(66, 68, 90, 1);
 }
 #menu-forwho
 {
@@ -130,13 +183,13 @@ nav a:hover {
     margin-top: 40px;
     width: 1400px;
     height: 150px;
-    outline: 1px solid rgb(44, 3, 192);
+    /* outline: 1px solid rgb(44, 3, 192); */
 }
 .person
 {
     width: 25%;
     height: 100%;
-    outline: 1px solid rgb(0, 255, 157);
+    /* outline: 1px solid rgb(0, 255, 157); */
     float: left;
 
     display: flex;
@@ -153,7 +206,7 @@ nav a:hover {
 	justify-content: center;
 	align-items: center;
 
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -186,14 +239,14 @@ nav a:hover {
     width: 1650px;
     width: 80%;
     height: 650px;
-    outline: 1px solid rgb(0, 68, 255);
+    /* outline: 1px solid rgb(0, 68, 255); */
     margin-bottom: 50px;
 }
 #whywe-desc
 {
     width: 30%;
     height: 100%;
-    outline: 1px solid rgb(255, 0, 200);
+    /* outline: 1px solid rgb(255, 0, 200); */
     float: left;
 }
 #whywe-desc-opis
@@ -221,7 +274,7 @@ nav a:hover {
 {
     width: 70%;
     height: 15%;
-    outline: 1px solid rgb(255, 0, 200);
+    /* outline: 1px solid rgb(255, 0, 200); */
     float: left;
     text-align: center;
 }
@@ -233,7 +286,7 @@ nav a:hover {
 {
     width: 70%;
     height: 70%;
-    outline: 1px solid rgb(255, 0, 200);
+    /* outline: 1px solid rgb(255, 0, 200); */
     float: left;
 
     display: flex;
@@ -243,7 +296,7 @@ nav a:hover {
 {
     width: 70%;
     height: 15%;
-    outline: 1px solid rgb(255, 0, 200);
+    /* outline: 1px solid rgb(255, 0, 200); */
     float: left;
 
     text-align:center;
@@ -297,6 +350,10 @@ nav a:hover {
         margin-top: 160px;
         width: 95%;
     }
+    #menu-join
+    {
+        height: 500px;
+    }
     
   }
   @media screen and (min-width: 800px) {
@@ -348,11 +405,28 @@ nav a:hover {
         padding-right: 0px;
     }
 }
+@media screen and (max-width: 1000px) {
+    #menu-join
+    {
+        height: 400px;
+        width: 90%;
+    }
 
+}
 
-
-
-
+@media screen and (max-width: 700px) {
+    #menu-join
+    {
+        height: 400px;
+        width: 100%;
+        
+    }
+    #menu-join-photo img
+    {
+        width: 100%;
+        padding-top: 80px;
+    }   
+}
 
 
 
