@@ -22,20 +22,82 @@ body{
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     background-color: white;
+    display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+#nav-lewy
+{
+    width: 30%;
+    float: left;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    
+}
+#nav-logo
+{
+}
+#nav-logo img
+{
+    float: right;
+    width: 40%;
+    padding-right: 20px;
+}
+#nav-nazwa
+{
+    float: left;
+    width: 60%;
+}
+#nav-prawy
+{
+    width: 70%;
+    height: 100%;
+}
+#nav-kolumny
+{
+    position: relative;
+    height: 100%;
+}
+
+nav {
+    width: auto;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s ease;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #ffd404;
+    border-radius: 15px;
+    color: black;
+}
+
 #menu-join
 {
     margin: auto;
     margin-top: 40px;
     /*width: 1600px;*/
     width: 80%;
-    height: 700px;
+    position: relative;
+    padding-top: 40%;
     outline: 1px solid blue;
-    display: flex;
-	justify-content: center;
-	align-items: center;
-  
-    
+
+    position: relative;
 }
 #ButtonStart
 {
@@ -46,6 +108,11 @@ body{
     border-color: grey;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
+
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);
 }
 #content
 {
@@ -71,7 +138,7 @@ body{
 
     display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; 
     
 }
 
@@ -89,6 +156,11 @@ body{
     width: 30%;
     float: left;
 }
+.person-picture > img
+{
+    width: 100%;
+    border-radius: 100%;
+}
 
 .person-name
 {
@@ -101,7 +173,7 @@ body{
 {
     margin: auto;
     margin-top: 80px;
-    /*width: 1650px;*/
+    width: 1650px;
     width: 80%;
     height: 600px;
     outline: 1px solid rgb(0, 68, 255);
@@ -155,11 +227,28 @@ body{
   @media screen and (min-width: 800px) {
     #menu-forwho 
     {
+        
         width: 80%;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    #nav {
+        gap: 0px;
+
+    }
+    #nav a 
+    {
+        font-size: small;
+        margin: 0;
+        padding: 0;
+    }
+    #nav-lewy
+    {
+        font-size: smaller;
     }
 
     
-  }
+}
 
 
 
