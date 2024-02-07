@@ -119,7 +119,7 @@ nav a:hover {
     width: 100%;
     height: auto;
     outline: 1px solid rgb(255, 0, 0);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(250, 250, 250);
 }
 #menu-forwho
 {
@@ -127,7 +127,7 @@ nav a:hover {
     margin-top: 40px;
     width: 1400px;
     height: 150px;
-    outline: 1px solid blue;
+    outline: 1px solid rgb(44, 3, 192);
 }
 .person
 {
@@ -149,6 +149,13 @@ nav a:hover {
     display: flex;
 	justify-content: center;
 	align-items: center;
+
+    outline: 1px solid orange;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px;
+    background-color: white;
 }
 
 .person-picture
@@ -175,7 +182,7 @@ nav a:hover {
     margin-top: 80px;
     width: 1650px;
     width: 80%;
-    height: 600px;
+    height: 650px;
     outline: 1px solid rgb(0, 68, 255);
     margin-bottom: 50px;
 }
@@ -186,36 +193,97 @@ nav a:hover {
     outline: 1px solid rgb(255, 0, 200);
     float: left;
 }
+#whywe-desc-opis
+{
+    padding: 20px;
+    height: auto;
+}
+#whywe-desc-opis > h2
+{
+    text-align: center;
+}
+#whywe-desc-fota
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#whywe-desc-fota > img
+{
+    width: 100%;
+    border-radius: 25px;
+
+}
+
 #whywe-title
 {
     width: 70%;
-    height: 10%;
+    height: 15%;
     outline: 1px solid rgb(255, 0, 200);
     float: left;
+    text-align: center;
 }
+#whywe-title h2{
+    padding: 15px 0;
+}
+
 #whywe-recom /*tutaj w srodku beda divy polecaniemai dlaczego my*/
 {
     width: 70%;
-    height: 80%;
+    height: 70%;
     outline: 1px solid rgb(255, 0, 200);
     float: left;
+
+    display: flex;
+	align-items: center; 
 }
 #whywe-footer
 {
     width: 70%;
-    height: 10%;
+    height: 15%;
     outline: 1px solid rgb(255, 0, 200);
     float: left;
+
+    text-align:center;
 }
+#whywe-footer p 
+{
+    padding: 25px 0;
+    
+}
+
+.recomendation
+{
+    outline: 1px solid grey;
+    height: 90%;
+    width: 380px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.recomendation img
+{
+    padding: 20px;
+}
+.recomendation p
+{
+    padding-left: 20px;
+}
+.recomendation h4
+{
+    padding-left: 20px;
+}
+
+
 
 @media screen and (max-width: 1400px) {
     #menu-forwho 
     {
         width: 100%;
+        height: 300px;
     }
     .person
     {
         width: 50%;
+        height: 50%;
     }
     #whywe
     {
@@ -227,9 +295,10 @@ nav a:hover {
   @media screen and (min-width: 800px) {
     #menu-forwho 
     {
-        
         width: 80%;
     }
+
+    
   }
   @media screen and (max-width: 650px) {
     #nav {
@@ -246,12 +315,32 @@ nav a:hover {
     {
         font-size: smaller;
     }
-
-    
 }
 
 
-
+@media screen and (max-width: 1200px) {
+    #nav-logo img
+    {
+        width: 60%;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #nav-logo img
+    {
+        width: 80%;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #nav-logo img
+    {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+}
 
 
 
