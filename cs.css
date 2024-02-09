@@ -337,6 +337,11 @@ strong{
         width: auto;
         margin: 0;
     }
+    .opisy
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /*dark/light theme*/
