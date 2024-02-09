@@ -1,0 +1,81 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #34236d;
+}
+
+.container{
+    background-color: white;
+    width: 90%;
+    max-width: 650px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#quiz{
+    padding: 20px;
+}
+.btn{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    border: 1px solid #3a3939;
+    padding: 10px;
+    margin: 10px auto 0;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.container h1{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+.btn:hover{
+    background-color: #3a3939;
+    color: white;
+}
+#next{
+    background-color: #34236d;
+    color: white;
+    font-weight: 780;
+    width: 30%;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: none;
+}
+.next:hover{
+    background-color: #4b31a1;
+}
+
+.correct{
+    background-color: #4caf50;
+}
+.incorrect{
+    background-color: #ff0000;
+}
+#question-number{
+    float: right;
+}
+#percentage{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    display: none;
+}
