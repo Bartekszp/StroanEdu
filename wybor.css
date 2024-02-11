@@ -79,6 +79,20 @@ p
     top: -10px;
 }
 
+a {   
+    color: black;   
+}
+
+a:active {
+    color: rgb(255, 0, 212);
+}
+
+a[tabindex]:focus {
+    color:rgb(255, 0, 212);
+    outline: none;
+}
+
+
 @media screen and (max-width: 1500px) {
     #main {
       width: 1100px;
