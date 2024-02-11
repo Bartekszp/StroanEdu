@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+    <div class="nav" id="navid">
+
+        <div id="divdlaprzycisku">
+            <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <label for="themeToggle" class="checkbox-label">
+                 <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cs.html">1. Wstęp do języka C#</a>
+        <a href="cs2.html">2. Zmienne i stałe</a>
+        <a href="cs3.html">3. Operacje matematyczne</a>
+        <a href="cs4.html">4. Operatory logiczne</a>
+        <a href="cs5.html">5. Instrukcja warunkowa IF</a>
+        <a href="cs6.html">6. Switch</a>
+        <a href="cs7.html">7. Pętle</a>
+        <a href="cs8.html">8. Tablice</a>
+        <a href="cs9.html">9. Metody</a>
+        <a href="cs10.html">10. Klasy</a>
+
+    </div>
+
+    <span onclick="openNav()" id="openMenuBut">
+        Menu
+    </span>
+
+
+    <div id="main">
+        <h1>Lekcja 2. Zmienne i stałe</h1>
+
+        <h2>Czym jest zmienna?</h2>
+        <div class="opisy">
+            <p>Zmienne są to takie elementy języka, które mogą przechowywać określony typ wartości.
+                Zmienna składa się z typu oraz z nazwy (identyfikatora). Zadaniem zmiennych jest
+                przetrzymywanie wartości nie tylko liczbowych. Przykładowo X w matematyce może
+                referować się do jednej zmiennej we wzorze. Niczym w zadaniu matematycznym
+                zapisujemy dane pod odpowiednimi nazwami i obliczamy wynik za pomocą
+                odpowiedniego wzoru.</p>
+        </div>
+        <br>
+        <div class="opisy">
+            <p><b>Deklaracja zmiennej:</b></p>
+            <p>[typ] [identyfikator];</p>
+            <p>int wiek;</p>
+            <p><b>Inicjalizacja zmiennej:</b></p>
+            <p>[identyfikator] = [wartosc_zmiennej];</p>
+            <p>wiek = 15;</p>
+            <p><b>Można także zainicjalizować zmienną w momencie deklaracji (zalecane)</b></p>
+            <p> int wiek = 15;</p>
+        </div>
+        
+        <h2>Błędne nazwy zmiennych</h2>
+        <div class="opisy">
+            <p>Identyfikatory to nazwy elementów w naszym programie. Trzeba przestrzegać pewnych
+                zasad, co do nazw elementów.</p>
+                <ul id="lineheight">
+                    <li>Nazwa musi zaczynać się od litery, podkreślenia lub znaku @</li>
+                    <li>Nazwa może składać się tylko z litery, cyfry i znaku podkreślenia.</li>
+                    <li>Nazwa nie może być taka sama jak nazwy kluczowych elementów w języku C#.</li>
+                    <li>Wielkość znaków ma znaczenie! (czyli int suma i int Suma to nie jest ta sama zmienna)</li>
+                </ul>
+        </div>
+        <h2>Uwagi:</h2>
+        <div class="opisy">
+            <ol>
+                <li><p>Podstawowe słowa kluczowe: abstract, static, char, int, double, float, string, bool,
+                    short, long, byte, public, private, protected, class, interface, enum, for, do, while, if, else,
+                    foreach, true, false, namespace, using, this, new - ich nie używamy jako nazw
+                    zmiennych ale są sytuacje gdzie używamy ich w nazwach złożonych np.
+                    thisIsLongStory.</p></li>
+                <li><p>Uwaga praktyczna: Nie nazywamy zmiennych a, b, c.. itd., ponieważ wracając do
+                    kodu po pewnym okresie czasu będziemy musieli tracić czas na rozszyfrowanie co
+                    dana zmienna oznacza. Nazywamy w sposób, który jednoznacznie mówi nam co dana
+                    zmienna przechowuje.</p></li>
+            </ol>
+
+        </div>
+
+        <div class="opisy">
+            <table>
+                <tr>
+                    <th>Typ danych</th>
+                    <th>Opis</th>
+                    <th>Zakres</th>
+                    <th>Użycie</th>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>Duże liczby całkowite</td>
+                    <td>-2^31 do 2^31 - 1</td>
+                    <td>int x = 22;</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>Duże liczby całkowite</td>
+                    <td>-2^63 do 2^62 - 1</td>
+                    <td>long wynik =25L;</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Liczby z ułamkami</td>
+                    <td>+-1.5 * 10^45 do -+3.4 * 10^38</td>
+                    <td>float y = 0.43F;</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Liczby z ułamkami, większy zakres</td>
+                    <td>-+5.0 * 10^-324 do –+1.7 * 10^308</td>
+                    <td>double fizyka = 0.1113</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>Typ do obliczania wartości pieniężnych</td>
+                    <td>28-29 cyfr</td>
+                    <td>decimal moneta = 0.22M</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>Tekst</td>
+                    <td>dowolna ilość znaków</td>
+                    <td>string tekst = "Jakiś tekst";</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Znak</td>
+                    <td>Znak jeden znak</td>
+                    <td>char znak = 'f';</td>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>Prawda bądź fałsz</td>
+                    <td>true / false</td>
+                    <td>bool prawda = true;</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Przydatne komendy:</h2>
+        <div class="opisy">
+            <p><b>Console.ReadLine();</b> //odczytuje tekst z konsoli; powrót do poziomu kodu tylko za pomocą wciśnięcia klawisza enter</p>
+            <p><b>Console.ReadKey();</b> // powrót do poziomu kodu za pomocą wciśnięcia dowolnego klawisza</p>
+        </div>
+        <h2>Czym są stałe?</h2>
+        <div class="opisy">
+            <p><b>Stałe</b> - Oprócz zmiennych, w programowaniu występują również stałe, czyli takie
+                elementy języka, które nie pozwalają na zmianę swojej wartości po początkowym jej
+                przypisaniu. Zmienna różni się tym, iż można zmienić jej wartość po początkowym
+                przypisaniu. Przyjęło się, że dla odróżnienia od zmiennych nazwy stałych piszemy w C#
+                dużymi literami.</p>
+            
+            <p><b>Składnia:</b></p>
+            <p><b>const [TYP] [Nazwa] = wartość;</b></p>
+            <p><b>Przykład:</b></p>
+            <p>const int WIEK = 5;</p>
+            <p>WIEK =7; //BŁĄD, nie można zmieniać wartości stałej.</p>
+        </div>
+        <br>
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="motivetheme.js"></script> 
+    <script src="script.js"></script>
+    <script src="scriptCopy.js"></script> 
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+    <div class="nav" id="navid">
+        
+        <div id="divdlaprzycisku">
+            <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <label for="themeToggle" class="checkbox-label">
+                 <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cs.html">1. Wstęp do języka C#</a>
+        <a href="cs2.html">2. Zmienne i stałe</a>
+        <a href="cs3.html">3. Operacje matematyczne</a>
+        <a href="cs4.html">4. Operatory logiczne</a>
+        <a href="cs5.html">5. Instrukcja warunkowa IF</a>
+        <a href="cs6.html">6. Switch</a>
+        <a href="cs7.html">7. Pętle</a>
+        <a href="cs8.html">8. Tablice</a>
+        <a href="cs9.html">9. Metody</a>
+        <a href="cs10.html">10. Klasy</a>
+
+    </div>
+
+    <span onclick="openNav()" id="openMenuBut">
+        Menu
+    </span>
+
+    
+    <div id="main">
+        <h1>Lekcja 5. Instrukcja warunkowa IF.</h1>
+
+        <h2>Instrukcja warunkowa</h2>
+        
+        <div class="opisy">
+            <p><b>Instrukcje warunkowe</b> pozwalają na wykonanie określonych fragmentów programu w
+                zależności od spełnionych warunków. Instrukcja if występuje w praktycznie każdym
+                języku programowania, chociaż sposób jej zapisu może się nieco różnić.</p>
+        
+        
+            <p>Instrukcja ta posiada kilka wariantów. W języku C# najprostsza składnia wygląda tak:</p>
+        </div>
+
+        <br>
+        <div class="console">
+            <pre id="myInput">
+<span class="ifcolor">if</span> (<span class="consolecolor">wyrażenie logiczne</span>) <span class="komentarzcolor">//<--true</span>
+{
+    <span class="komentarzcolor">//blok kodu, który wykona się, jeśli wyrażenie logiczne jest prawdziwe –
+    //ma wartość „true”</span>
+}
+            </pre>
+        </div> 
+        <br>
+        <br>
+        <div class="opisy">
+            <p>Bardziej zaawansowana wersja, zakładająca istnienie kilku możliwych wariantów:</p>
+        </div>
+        <br>
+
+        <div class="console">
+            <pre id="myInput1">
+<span class="ifcolor">if</span> (<span class="consolecolor">warunek_1</span>)
+{
+    <span class="komentarzcolor">//jeśli zostanie spełniony warunek, wykona się ten kawałek kodu
+    //blok kodu;</span>
+}
+<span class="ifcolor">else if</span> (<span class="consolecolor">warunek_2</span>)
+{
+    <span class="komentarzcolor">//wykona się, jeśli warunek_1 nie zostanie spełniony, ale warunek_2 już tak
+    //blok kodu;</span>
+}
+<span class="ifcolor">else</span> <span class="komentarzcolor">// we wszystkich innych przypadkach wykona się ten kawałek kodu</span>
+{
+    <span class="komentarzcolor">//blok kodu;</span>
+}
+    
+            </pre>
+        </div>
+
+<br><br>
+
+        <div id="przyciskupp">
+            <p class="bolder">Przykład:</p>
+            <button id="button2">Copy</button>
+        </div>
+        <div class="console">
+            <pre id="myInput2">
+<span class="zmiennecolor">int</span> <span class="consolecolor">liczba1</span> = <span class="numberscolor">4</span>;
+<span class="zmiennecolor">int</span> <span class="consolecolor">liczba2</span> = <span class="numberscolor">5</span>;
+<span class="ifcolor">if</span> (<span class="consolecolor">liczba1</span> > <span class="consolecolor">liczba2</span>)
+{
+    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"{</span><span class="consolecolor">liczba1</span><span class="textcolor">} jest większa niż {</span><span class="consolecolor">liczba2</span><span class="textcolor">}"</span>);
+}
+<span class="ifcolor">else if</span> (<span class="consolecolor">liczba2</span> > <span class="consolecolor">liczba1</span>)
+{
+    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"{</span><span class="consolecolor">liczba2</span><span class="textcolor">} jest większa niż {</span><span class="consolecolor">liczba1</span><span class="textcolor">}"</span>);
+}
+<span class="ifcolor">else</span>
+{
+    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Liczby są sobie równe"</span>);
+}
+<span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="consolecolor">liczba1</span>);
+            </pre>
+        </div>
+
+        <h2><u>Zagnieżdżanie instrukcji:</u></h2>
+        <div class="opisy">
+            <p>Instrukcje warunkowe można w sobie zagnieżdżać to znaczy, wewnątrz instrukcji
+                sprawdzać kolejny warunek:</p>
+
+            <b>Przykład w pseudokodzie:</b>
+            <p>Na prezydenta może kandydować ktoś, kto ma 35 lat i zebrał 100 000 głosów.</p>
+        </div>
+        <br>
+        <div class="console">
+            <pre id="myInput3">
+<span class="ifcolor">if</span>( czy masz 35 lat? )
+{
+    <span class="ifcolor">if</span>( Czy zebrałeś 100 000 głosów? )
+    {
+        Możesz kandydować! 😊
+    }
+    <span class="ifcolor"> else</span>
+    {
+        Nie możesz kandydować ☹
+    }
+}
+<span class="ifcolor">else</span>
+{
+    Nie możesz kandydować ☹
+}
+            </pre>
+        </div> 
+
+        <h2>Uważaj na te błędy!</h2>
+        <div class="console">
+            <pre id="myInput4">
+- Nigdy nie stawiaj średnika za nawiasem w if.
+<span class="ifcolor">if</span>(warunek)<strong>; <- ŹLE!</strong>
+{
+}
+
+- Zmienna zadeklarowana wewnątrz bloku kodu w if, jest niedostępna poza tym
+  blokiem:
+  <span class="ifcolor">if</span>(warunek)
+{
+    <span class="zmiennecolor">int</span> <span class="consolecolor">x</span> = <span class="numberscolor">1</span>;
+}
+<span class="consolecolor">x</span>++; <strong><- Błąd</strong>! Zmienna x jest tu niedostępna!
+            </pre>
+        </div> 
+
+
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="motivetheme.js"></script> 
+    <script src="script.js"></script>
+    <script src="scriptCopy.js"></script> 
+</body>
+
+</html>
