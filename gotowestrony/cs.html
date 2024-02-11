@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+    <div class="nav" id="navid">
+
+        <div id="divdlaprzycisku">
+            <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <label for="themeToggle" class="checkbox-label">
+                 <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cs.html">1. Wstęp do języka C#</a>
+        <a href="cs2.html">2. Zmienne i stałe</a>
+        <a href="cs3.html">3. Operacje matematyczne</a>
+        <a href="cs4.html">4. Operatory logiczne</a>
+        <a href="cs5.html">5. Instrukcja warunkowa IF</a>
+        <a href="cs6.html">6. Switch</a>
+        <a href="cs7.html">7. Pętle</a>
+        <a href="cs8.html">8. Tablice</a>
+        <a href="cs9.html">9. Metody</a>
+        <a href="cs10.html">10. Klasy</a>
+
+    </div>
+
+    <span onclick="openNav()" id="openMenuBut">
+        Menu
+    </span>
+    
+
+    <div id="main">
+        <h1>Lekcja 1. Wstęp do języka C# i środowiska Visual Studio Community</h1>
+
+        <h2>Czym jest programowanie?</h2>
+        <div class="opisy">
+
+            <p><b>Programowanie</b>, polega na rozwiązywaniu pewnych problemów (matematycznych,
+                logistycznych), ale także na tworzeniu rozrywki (gier), wspomaganiu edukacji,
+                automatyzacji czynności wykonywanych przez człowieka jak np. kontrolowanie stanu
+                magazynu, kontrolowanie maszyn / robotów na liniach produkcyjnych i wiele innych.
+                Programista, jeśli chce zrealizować zadanie, musi zapisać pewien algorytm, korzystając
+                z ciągu instrukcji
+                rozpoznawalnych przez komputer. Wszelkie polecenia w danym języku
+                programowania są wpisywane przy użyciu klawiatury.
+                Oczywiście nie mogą to być dowolne polecenia i instrukcje, lecz takie, które mogą
+                być rozpoznane przez kompilator. Język programowania jest więc sposobem na
+                przekazanie maszynie pewnych poleceń do wykonania. Kompilator natomiast jest
+                narzędziem wspomagającym programistę w jego pracy. Tłumaczy on
+                polecenia języka programowania na instrukcje. Mówiąc ogólnie — na podstawie tych
+                instrukcji wykonuje życzenia programisty. Dopiero po zbudowaniu tego zbioru instrukcji i
+                zależności - projekt staje się aplikacją.</p>
+        </div>
+        <div class="opisy">
+            <p><b>IDE</b> – czyli zintegrowane środowisko jest to aplikacja lub zespół aplikacji
+            (środowisko) służących do tworzenia, modyfikowania, testowania i konserwacji
+            oprogramowania. Aplikacje będące zintegrowanymi środowiskami
+            programistycznymi charakteryzują się tym, że udostępniają złożoną, wieloraką
+            funkcjonalność obejmującą edycję kodu źródłowego, kompilowanie kodu źródłowego,
+            tworzenie zasobów programu (tzn. formatek / ekranów / okien dialogowych, menu,
+            raportów, elementów graficznych takich jak ikony, obrazy itp.), tworzenie baz danych,
+            komponentów i innych. W trakcie zajęć korzystać będziemy ze środowiska Visual
+            Studio Community.</p>
+
+        </div>
+        <h2>Pierwszy program – Hello World</h2>
+        <div class="opisy">
+            <p>Uruchamiamy Visual Studio, klikamy File ->New -> Project. Z dostępnych
+                szablonów projektu wybieramy Visual C# -> Console application (.NET Framework).
+                Tworzymy nowy projekt o nazwie HelloWorld. W nowym pliku z rozszerzeniem .cs (są to
+                pliki zawierające kod c#) wpisujemy następujący kod.
+                </p>
+        </div>
+
+        <div id="przyciskupp">
+            <button id="button">Copy</button>
+        </div>
+        <div class="console">
+            <!--<button id="button">Copy</button>-->
+            <pre id="myInput">
+<span class="voidcolor">class</span> <span class="programcolor">Program</span>
+{
+    <span class="voidcolor">static void</span> <span class="funkcjacolor">Main</span>(<span class="voidcolor">string</span>[] <span class="consolecolor">args</span>)
+    {
+        <span class="komentarzcolor">//mój pierwszy program!!!</span>
+        <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Hello World!"</span>);
+        <span class="consolecolor">Console</span>.<span class="funkcjacolor">ReadLine</span>();
+    }
+}
+            </pre>
+        </div>
+
+        <h2>Opis elementów powyższego kodu</h2>
+        <div class="opisy">
+            <ol id="specjality">
+                <li>class Program
+                    <p>Jest to nic innego jak klasa o nazwie Hello. Klasa to krótko mówiąc
+                        komórka informacji, zawiera ona różne dane - zmienne, metody(funkcje) a także inne
+                        obiekty. Klasy zostaną dokładnie omówione w dalszej części kursu.
+                    </p>
+                </li>
+                <li>static void Main(string[] args)
+                    <p> Jest to metoda main, to od niej rozpoczyna się
+                        działanie programu i w niej wywołujemy inne metody, lub tworzymy obiekty za to
+                        odpowiedzialne. W nawiasie podane są argumenty w postaci tablicy Stringów. String
+                        jest to typ zmiennych, który może przechowywać tekst. O różnych typach zmiennych
+                        będziemy uczyć się na kolejnych lekcjach kursu.
+                    </p>
+                </li>
+                <li>Console.WriteLine(“Hello World!”);
+                    <p>Wyświetl napis na konsoli podany jako
+                        argument(“Hello World”). Zwróć uwagę na to, że napis podajemy w cudzysłowie a
+                        instrukcję kończymy średnikiem, a również na to, że odpowiednie sekcje kodu - tzw
+                        bloki kodu - “akcentujemy” przy pomocy nawiasów klamrowych { }. Ich pominięcie
+                        sprawi, że program nie zadziała.
+                    </p>
+                </li>
+                <li>Komentarze
+                    <p>Bardzo ważną rzeczą są komentarze, W ich ramach możemy
+                        umieszczać skrócone opisy napisanej przez nas funkcji oraz zadeklarowanych
+                        zmiennych. Dzięki nim łatwo się odnaleźć w przypadku większych projektów, ale
+                        przede wszystkim w przypadku, gdy inne osoby nie będą mogły zrozumieć naszego
+                        kodu mogą sięgnąć po nasz opis (przy większych projektach generujemy
+                        dokumentację zamiast dodawać dużą liczbę komentarzy w kodzie).
+                        Komentarze są widoczne jedynie dla nas, przy kompilacji są one
+                        pomijane i nie mają wpływu na działanie programu. W C# istnieją dwa rodzaje
+                        komentarzy:</p>
+                        <ul>
+                            <li><span class="komentarzcolor">//mój pierwszy program!!!</span><p>Tekst umieszczony za podwojonym znaku
+                                slash jest uznawany za komentarz aż do końca linii</p></li>
+                            <li><span class="komentarzcolor">/* mój pierwszy program!!! */</span><p>Tekst umieszczony w takich znacznikach
+                                jest traktowany jako komentarz przez wiele linii kodu.</p></li>
+                        </ul>
+
+                </li>
+            </ol>
+        </div>
+        <br>
+    </div>
+    <div id="stopka">
+
+    </div>
+    <script src="motivetheme.js"></script> 
+    <script src="script.js"></script>
+    <script src="scriptCopy.js"></script> 
+</body>
+
+
+</html>
+
+<!-- function openNav() {
+
+    document.getElementById("navid").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.width = "80%";
+
+}
+
+function closeNav() {
+    document.getElementById("navid").style.width = "0";
+    document.getElementById("main").style.marginLeft = "10%";
+    document.getElementById("main").style.width = "80%";
+} -->
+
+
+<!-- <script>
+  function copyFunction() {
+        const copyText = document.getElementById("myInput").textContent;
+        const textArea = document.createElement('textarea');
+        textArea.textContent = copyText;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand("copy");
+    }
+
+    let czyOtwarte = false;
+
+    ///////////////////////////////////////////////
+    function sprawdzSzerokoscOkna() {
+        const szerokoscOkna = window.innerWidth;
+        console.log('Szerokość okna:', szerokoscOkna);
+
+        if(czyOtwarte)
+        {
+            openNav();
+        }else
+        {
+            closeNav();
+        }
+    }
+
+    // Dodanie nasłuchiwania na zdarzenie zmiany rozmiaru okna
+    window.addEventListener('resize', sprawdzSzerokoscOkna);
+
+    // Wywołanie funkcji na początku, aby uzyskać początkową szerokość okna
+    sprawdzSzerokoscOkna();
+
+    /////////////////////////////////////////////////////
+
+document.getElementById('button').addEventListener('click', copyFunction);
+
+        function openNav() {
+            czyOtwarte = true;
+            if (window.innerWidth < 800) {
+                document.getElementById("navid").style.width = "100%";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("main").style.width = "0%";
+            }
+            else {
+
+                document.getElementById("navid").style.width = "20%";
+                document.getElementById("main").style.marginLeft = "20%";
+                document.getElementById("main").style.width = "80%";
+            }
+
+        }
+
+        function closeNav() {
+            czyOtwarte = false;
+            if (window.innerWidth < 800) {
+                document.getElementById("navid").style.width = "0";
+                document.getElementById("main").style.margin = "0";
+                document.getElementById("main").style.width = "auto";
+            }
+            else {
+
+                document.getElementById("navid").style.width = "0";
+                document.getElementById("main").style.marginLeft = "10%";
+                document.getElementById("main").style.width = "80%";
+            }
+        }
+
+
+
+</script> -->
