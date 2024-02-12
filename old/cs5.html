@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5. Instrukcja warunkowa IF</title>
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
@@ -30,6 +30,7 @@
         <a href="cs8.html">8. Tablice</a>
         <a href="cs9.html">9. Metody</a>
         <a href="cs10.html">10. Klasy</a>
+        <a href="quiz.html">Test</a>
 
     </div>
 
@@ -55,10 +56,10 @@
         <br>
         <div class="console">
             <pre id="myInput">
-<span class="ifcolor">if</span> (<span class="consolecolor">wyrażenie logiczne</span>) <span class="komentarzcolor">//<--true</span>
+if (wyrażenie logiczne) //<--true
 {
-    <span class="komentarzcolor">//blok kodu, który wykona się, jeśli wyrażenie logiczne jest prawdziwe –
-    //ma wartość „true”</span>
+    //blok kodu, który wykona się, jeśli wyrażenie logiczne jest prawdziwe –
+    //ma wartość „true” 
 }
             </pre>
         </div> 
@@ -69,21 +70,22 @@
         </div>
         <br>
 
+
         <div class="console">
             <pre id="myInput1">
-<span class="ifcolor">if</span> (<span class="consolecolor">warunek_1</span>)
+if (warunek_1)
 {
-    <span class="komentarzcolor">//jeśli zostanie spełniony warunek, wykona się ten kawałek kodu
-    //blok kodu;</span>
+    //jeśli zostanie spełniony warunek, wykona się ten kawałek kodu
+    //blok kodu;
 }
-<span class="ifcolor">else if</span> (<span class="consolecolor">warunek_2</span>)
+else if (warunek_2)
 {
-    <span class="komentarzcolor">//wykona się, jeśli warunek_1 nie zostanie spełniony, ale warunek_2 już tak
-    //blok kodu;</span>
+    //wykona się, jeśli warunek_1 nie zostanie spełniony, ale warunek_2 już tak
+    //blok kodu;
 }
-<span class="ifcolor">else</span> <span class="komentarzcolor">// we wszystkich innych przypadkach wykona się ten kawałek kodu</span>
+else // we wszystkich innych przypadkach wykona się ten kawałek kodu
 {
-    <span class="komentarzcolor">//blok kodu;</span>
+    //blok kodu;
 }
     
             </pre>
@@ -97,21 +99,21 @@
         </div>
         <div class="console">
             <pre id="myInput2">
-<span class="zmiennecolor">int</span> <span class="consolecolor">liczba1</span> = <span class="numberscolor">4</span>;
-<span class="zmiennecolor">int</span> <span class="consolecolor">liczba2</span> = <span class="numberscolor">5</span>;
-<span class="ifcolor">if</span> (<span class="consolecolor">liczba1</span> > <span class="consolecolor">liczba2</span>)
+int liczba1 = 4;
+int liczba2 = 5;
+if (liczba1 > liczba2)
 {
-    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"{</span><span class="consolecolor">liczba1</span><span class="textcolor">} jest większa niż {</span><span class="consolecolor">liczba2</span><span class="textcolor">}"</span>);
+    Console.WriteLine($"{liczba1} jest większa niż {liczba2}");
 }
-<span class="ifcolor">else if</span> (<span class="consolecolor">liczba2</span> > <span class="consolecolor">liczba1</span>)
+else if (liczba2 > liczba1)
 {
-    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"{</span><span class="consolecolor">liczba2</span><span class="textcolor">} jest większa niż {</span><span class="consolecolor">liczba1</span><span class="textcolor">}"</span>);
+    Console.WriteLine($"{liczba2} jest większa niż {liczba1}");
 }
-<span class="ifcolor">else</span>
+else
 {
-    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Liczby są sobie równe"</span>);
+    Console.WriteLine("Liczby są sobie równe");
 }
-<span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="consolecolor">liczba1</span>);
+Console.WriteLine(liczba1);
             </pre>
         </div>
 
@@ -126,18 +128,18 @@
         <br>
         <div class="console">
             <pre id="myInput3">
-<span class="ifcolor">if</span>( czy masz 35 lat? )
+if( czy masz 35 lat? )
 {
-    <span class="ifcolor">if</span>( Czy zebrałeś 100 000 głosów? )
+    if( Czy zebrałeś 100 000 głosów? )
     {
         Możesz kandydować! 😊
     }
-    <span class="ifcolor"> else</span>
+    else
     {
         Nie możesz kandydować ☹
     }
 }
-<span class="ifcolor">else</span>
+else
 {
     Nie możesz kandydować ☹
 }
@@ -148,17 +150,17 @@
         <div class="console">
             <pre id="myInput4">
 - Nigdy nie stawiaj średnika za nawiasem w if.
-<span class="ifcolor">if</span>(warunek)<strong>; <- ŹLE!</strong>
+if(warunek)<strong>; <- ŹLE!</strong>
 {
 }
 
 - Zmienna zadeklarowana wewnątrz bloku kodu w if, jest niedostępna poza tym
   blokiem:
-  <span class="ifcolor">if</span>(warunek)
+if(warunek)
 {
-    <span class="zmiennecolor">int</span> <span class="consolecolor">x</span> = <span class="numberscolor">1</span>;
+    int x = 1;
 }
-<span class="consolecolor">x</span>++; <strong><- Błąd</strong>! Zmienna x jest tu niedostępna!
+x++; <strong><- Błąd</strong>! Zmienna x jest tu niedostępna!
             </pre>
         </div> 
 

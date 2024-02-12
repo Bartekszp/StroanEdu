@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>10. Klasy</title>
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
-
 <body>
     <div class="nav" id="navid">
-
+        
         <div id="divdlaprzycisku">
             <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
             <label for="themeToggle" class="checkbox-label">
-                <i class="fas fa-moon"></i>
+                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
                 <span class="ball"></span>
             </label>
@@ -32,6 +30,7 @@
         <a href="cs8.html">8. Tablice</a>
         <a href="cs9.html">9. Metody</a>
         <a href="cs10.html">10. Klasy</a>
+        <a href="quiz.html">Test</a>
 
     </div>
 
@@ -39,7 +38,7 @@
         Menu
     </span>
 
-
+    
     <div id="main">
         <h1>Lekcja 10. Wstęp do OOP</h1>
 
@@ -70,8 +69,7 @@
                 pomocy rzeczowników lub rzeczowników z przymiotnikami (zazwyczaj w liczbie
                 pojedynczej). Ponadto zaleca się, aby nazwy klas zaczynać się z dużej litery, a jeśli
                 nazwa ma kilka słów, kolejne słowa także powinny zaczynać się z dużej litery, np.
-                <b>WysokiCzlowiek</b>, jest to tak zwany <b>PascalCase</b>.
-            </p>
+                <b>WysokiCzlowiek</b>, jest to tak zwany <b>PascalCase</b>.</p>
 
         </div>
         <h2>Modyfikatory dostępu</h2>
@@ -89,7 +87,7 @@
         <h2>Tworzenie klasy</h2>
         <div class="console">
             <pre id="myInput">
-<span class="consolecolor">ModyfikatorDostepu</span> <span class="zmiennecolor">class</span> <span class="classcolor">NazwaKlasy</span>
+ModyfikatorDostepu class NazwaKlasy
 {
     Własności
     Metody
@@ -102,13 +100,13 @@
         </div>
         <div class="console">
             <pre id="myInput1">
-<span class="deffunkcji">public</span> <span class="zmiennecolor">class</span> <span class="classcolor">Osoba</span>
+public class Osoba
 {
-    <span class="komentarzcolor">// własności klasy</span>
-    <span class="deffunkcji">public</span> <span class="zmiennecolor">string</span> <span class="consolecolor">Imie</span>;
-    <span class="deffunkcji">public</span> <span class="zmiennecolor">string</span> <span class="consolecolor">Nazwisko</span>;
-    <span class="komentarzcolor">// metoda klasy</span>
-    <span class="deffunkcji">public</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">PustaMetodaKlasy</span>()
+    // własności klasy
+    public string Imie;
+    public string Nazwisko;
+    // metoda klasy
+    public void PustaMetodaKlasy()
     }
     {
 }
@@ -124,3 +122,4 @@
     <script src="scriptCopy.js"></script> 
 </body>
 </html>
+

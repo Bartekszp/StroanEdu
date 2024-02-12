@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>7. Pętle</title>
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
-
 <body>
     <div class="nav" id="navid">
-
+        
         <div id="divdlaprzycisku">
             <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
             <label for="themeToggle" class="checkbox-label">
-                <i class="fas fa-moon"></i>
+                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
                 <span class="ball"></span>
             </label>
@@ -32,6 +30,7 @@
         <a href="cs8.html">8. Tablice</a>
         <a href="cs9.html">9. Metody</a>
         <a href="cs10.html">10. Klasy</a>
+        <a href="quiz.html">Test</a>
 
     </div>
 
@@ -39,7 +38,7 @@
         Menu
     </span>
 
-
+    
     <div id="main">
 
         <h1>Lekcja 7. Pętle</h1>
@@ -82,17 +81,17 @@ for ([inicjalizacja]; [wyrażenie logiczne]; [inkrementacja/dekrementacja])
         </div>
         <div class="console">
             <pre id="myInput">
-<span class="ifcolor">for</span> (<span class="zmiennecolor">int</span> <span class="consolecolor">i</span> = <span class="numberscolor">0</span>; <span class="consolecolor">i</span> < <span class="numberscolor">10</span>; <span class="consolecolor">i</span>++)
+for (int i = 0; i < 10; i++)
 {
-    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="consolecolor">i</span>);
+    Console.WriteLine(i);
 }
             </pre>
-        </div>
+        </div> 
 
         <div class="opisy">
             <br>
             <p><b><i>Algorytm pętli for można przedstawić w następujący sposób:</i></b></p>
-
+            
             <ul>
                 <li>ustaw wartość początkową licznika pętli,</li>
                 <li>wykonuj obiegi pętli tak długo, jak długo wyrażenie logiczne jest prawdziwe</li>
@@ -108,25 +107,25 @@ for ([inicjalizacja]; [wyrażenie logiczne]; [inkrementacja/dekrementacja])
         </div>
         <div class="console">
             <pre id="myInput1">
-<span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">Main</span>(<span class="zmiennecolor">string</span><span class="ifcolor">[]</span> <span class="consolecolor">args</span>)
+static void Main(string[] args)
 {
-    <span class="ifcolor">for</span> (<span class="zmiennecolor">int</span> <span class="consolecolor">i</span> = <span class="numberscolor">1</span>; <span class="consolecolor">i</span> <= <span class="numberscolor">5</span>; <span class="consolecolor">i</span>++)
+    for (int i = 1; i <= 5; i++)
     {
-        <span class="ifcolor">for</span> (<span class="zmiennecolor">int</span> <span class="consolecolor">j</span> = <span class="numberscolor">1</span>; <span class="consolecolor">j</span> <= <span class="numberscolor">5</span>; <span class="consolecolor">j</span>++)
+        for (int j = 1; j <= 5; j++)
         {
-            <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"i = {</span><span class="consolecolor">i</span><span class="textcolor">}, j = {</span><span class="consolecolor">j</span><span class="textcolor">}"</span>);
+            Console.WriteLine($"i = {i}, j = {j}");
         }
-        <span class="consolecolor">Console</span>.<span class="funkcjacolor">ReadKey</span>();
+        Console.ReadKey();
     }
 }
             </pre>
-        </div>
+        </div> 
 
         <h2>Pętla While</h2>
         <div class="opisy">
             <p>Zapis pętli while jest prostszy od pętli for, chociaż występują w niej podobne elementy.</p>
             <h5>Składnia:</h5>
-            <pre>
+<pre>
 while (wyrażenie logiczne)
 {
     // ciało pętli (instrukcje)
@@ -139,22 +138,20 @@ while (wyrażenie logiczne)
         </div>
         <div class="console">
             <pre id="myInput2">
-<span class="zmiennecolor">int</span> <span class = "consolecolor">i</span> = <span class="numberscolor">0</span>;
-<span class="ifcolor">while</span> (<span class = "consolecolor">i</span> < <span class="numberscolor">10</span>)
+int i = 0;
+while (i < 10)
 {
-    <span class = "consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Cyfra "</span> + <span class="consolecolor">i</span>);
-    <span class = "consolecolor">i</span>++;
+    Console.WriteLine("Cyfra " + i);
+    i++;
 }
             </pre>
-        </div>
+        </div> 
 
         <div class="opisy">
-            <p><b>Algorytm pętli while można przedstawić w następujący sposób:</b>
-                <br><i>jeżeli wyrażenie logiczne ma wartość true, to wykonaj instrukcje zawarte w pętli.</i>
-            </p>
-            <p><b>Powtarzaj ten krok, dopóki jest spełnione wyrażenie logiczne,</b>
-                <br><i>jeżeli wyrażenie logiczne zwraca wartość false – zakończ działanie pętli.</i>
-            </p>
+            <p><b>Algorytm pętli while można przedstawić w następujący sposób:</b> 
+                <br><i>jeżeli wyrażenie logiczne ma wartość true, to wykonaj instrukcje zawarte w pętli.</i></p>
+                <p><b>Powtarzaj ten krok, dopóki jest spełnione wyrażenie logiczne,</b>
+                <br><i>jeżeli wyrażenie logiczne zwraca wartość false – zakończ działanie pętli.</i></p>
 
         </div>
 
@@ -163,17 +160,17 @@ while (wyrażenie logiczne)
             <p>Sposób działania pętli do..while jest bardzo podobny do działania pętli while. Tu także
                 występuje wyrażenie logiczne, od którego zależy, czy pętla będzie wykonana (dla
                 wartości</p>
-            <p>true), czy też zostanie zakończona (dla wartości false). Różnica pomiędzy tymi pętlami
-                polega na tym, że w pętli while warunek logiczny sprawdzany jest <b>przed pierwszym</b>
-                wykonaniem pętli, a w do..while warunek logiczny testowany jest <b>po pierwszym</b>
-                wykonaniu
-                pętli.</p>
+                <p>true), czy też zostanie zakończona (dla wartości false). Różnica pomiędzy tymi pętlami
+                    polega na tym, że w pętli while warunek logiczny sprawdzany jest <b>przed pierwszym</b>
+                    wykonaniem pętli, a w do..while warunek logiczny testowany jest <b>po pierwszym</b>
+                    wykonaniu
+                    pętli.</p>
             <p><b>W konsekwencji pętla do..while wykonana zostanie przynajmniej jeden raz, w
-                    czasie gdy pętla while może nie zostać wykonana w ogóle, gdyby od wyrażenie
-                    logiczne było nie spełnione./b></p>
+                czasie gdy pętla while może nie zostać wykonana w ogóle, gdyby od wyrażenie
+                logiczne było nie spełnione./b></p>
 
-            <h5>Składnia pętli do – while</h5>
-            <pre>
+                <h5>Składnia pętli do – while</h5>
+                <pre>
 do
 {
     // ciało pętli (instrukcje)
@@ -187,15 +184,15 @@ while (wyrażenie logiczne)
         </div>
         <div class="console">
             <pre id="myInput3">
-<span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">Main</span>(<span class="zmiennecolor">string</span><span class="ifcolor">[]</span> <span class="consolecolor">args</span>)
+static void Main(string[] args)
 {
-    <span class="zmiennecolor">string</span> <span class="consolecolor">odpowiedz</span>;
-    <span class="ifcolor">do</span>
+    string odpowiedz;
+    do
     {
-        <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">$"Czas: {</span><span class="consolecolor">DateTime.Now</span><span class="textcolor">}"</span>,);
-        <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Ponownie pokazać aktualny czas? (t/n)"</span>);
-        <span class="consolecolor">odpowiedz</span> = <span class="consolecolor">Console</span>.<span class="funkcjacolor">ReadLine</span>();
-    } <span class="ifcolor">while</span> (<span class="consolecolor">odpowiedz</span> != <span class="textcolor">"n"</span>);
+        Console.WriteLine($"Czas: {DateTime.Now}",);
+        Console.WriteLine("Ponownie pokazać aktualny czas? (t/n)");
+        odpowiedz = Console.ReadLine();
+    } while (odpowiedz != "n");
 }
             </pre>
         </div>
@@ -207,9 +204,9 @@ while (wyrażenie logiczne)
     <div id="stopka">
 
     </div>
-    <script src="motivetheme.js"></script>
+    <script src="motivetheme.js"></script> 
     <script src="script.js"></script>
-    <script src="scriptCopy.js"></script>
+    <script src="scriptCopy.js"></script> 
 </body>
 
 </html>

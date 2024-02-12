@@ -189,6 +189,7 @@ h1
     background: linear-gradient(to right, #f32170, #5326cf,#cf23cf, #ad0cb0);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 h2
@@ -295,10 +296,26 @@ button:focus
 {
     color: #b57cb0;
 }
+.zmiennecolor
+{
+    color: #2666cb;
+}
+.numberscolor
+{
+    color: #94ce89;
+}
 
 .bolder
 {
     font-weight: bold;
+}
+.deffunkcji
+{
+    color: #569cd6;
+}
+.classcolor
+{
+    color: #4ebb7d;
 }
 
 #stopka
@@ -336,11 +353,6 @@ strong{
     #main {
         width: auto;
         margin: 0;
-    }
-    .opisy
-    {
-        width: 80%;
-        margin: 0 auto;
     }
 }
 

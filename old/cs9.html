@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>9. Metody</title>
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
-
 <body>
     <div class="nav" id="navid">
-
+        
         <div id="divdlaprzycisku">
             <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
             <label for="themeToggle" class="checkbox-label">
-                <i class="fas fa-moon"></i>
+                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
                 <span class="ball"></span>
             </label>
@@ -32,6 +30,7 @@
         <a href="cs8.html">8. Tablice</a>
         <a href="cs9.html">9. Metody</a>
         <a href="cs10.html">10. Klasy</a>
+        <a href="quiz.html">Test</a>
 
     </div>
 
@@ -39,7 +38,7 @@
         Menu
     </span>
 
-
+    
     <div id="main">
         <h1>Lekcja 9. Metody</h1>
 
@@ -61,7 +60,7 @@
             <p>Definicja metody składa się z kilku elementów (elementy ujęte w nawiasy kwadratowe są
                 opcjonalne):</p>
 
-            <pre>
+<pre>
 [Modyfikatory] Typ Nazwa ([Lista argumentów])
 {
     [Ciało metody]
@@ -104,14 +103,14 @@
                     </div>
                     <div class="console">
                         <pre id="myInput">
-<span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">Main</span>(<span class="zmiennecolor">string</span><span class="ifcolor">[]</span> <span class="consolecolor">args</span>)
+static void Main(string[] args)
 {
-    <span class="funkcjacolor">WypiszImie</span><span class="ifcolor">()</span>;
+    WypiszImie();
 }
 
-<span class="deffunkcji">private</span> <span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">WypiszImie</span><span class="ifcolor">()</span>
+private static void WypiszImie()
 {
-    <span class="funkcjacolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Moje imie to Marek"</span>);
+    Console.WriteLine("Moje imie to Marek");
 }
 
                         </pre>
@@ -125,15 +124,15 @@
                     </div>
                     <div class="console">
                         <pre id="myInput1">
-<span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">Main</span>(<span class="zmiennecolor">string</span><span class="ifcolor">[]</span> <span class="consolecolor">args</span>)
+static void Main(string[] args)
 {
-    <span class="funkcjacolor">DodajDwieLiczby</span>(<span class="numberscolor">5</span>,<span class="numberscolor">10</span>)
+    DodajDwieLiczby(5,10)
 }
 
-<span class="deffunkcji">private</span> <span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">DodajDwieLiczby</span>(<span class="zmiennecolor">int</span> <span class="consolecolor">liczba1</span>, <span class="zmiennecolor">int</span> <span class="consolecolor">liczba2</span>)
+private static void DodajDwieLiczby(int liczba1, int liczba2)
 {
-    <span class="zmiennecolor">int</span> <span class="consolecolor">wynik</span> = <span class="consolecolor">liczba1</span> + <span class="consolecolor">liczba2</span>;
-    <span class="consolecolor">Console</span>.<span class="funkcjacolor">WriteLine</span>(<span class="textcolor">"Wynik dodawania to {0}"</span>,<span class="consolecolor">wynik</span>)
+    int wynik = liczba1 + liczba2;
+    Console.WriteLine("Wynik dodawania to {0}",wynik)
 }
 
                         </pre>
@@ -147,14 +146,14 @@
                     </div>
                     <div class="console">
                         <pre id="myInput1">
-<span class="deffunkcji">static</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">Main</span>(<span class="zmiennecolor">string</span><span class="ifcolor">[]</span> <span class="consolecolor">args</span>)
+static void Main(string[] args)
 {
-    <span class="zmiennecolor">float</span> <span class="consolecolor">wynikDzieleniaMetody</span> = <span class="funkcjacolor">OdejmijLiczby</span>(<span class="numberscolor">5</span>, <span class="numberscolor">10</span>);
+    float wynikDzieleniaMetody = OdejmijLiczby(5, 10);
 }
 
-<span class="deffunkcji">private</span> <span class="deffunkcji">static</span> <span class="zmiennecolor">float</span> <span class="funkcjacolor">OdejmijLiczby</span>(<span class="zmiennecolor">float</span> <span class="consolecolor">liczba1</span>, <span class="zmiennecolor">float</span> <span class="consolecolor">liczba2</span>)
+private static float OdejmijLiczby(float liczba1, float liczba2)
 {
-    <span class="ifcolor">return</span> <span class="consolecolor">liczba2</span> - <span class="consolecolor">liczba1</span>;
+    return liczba2 - liczba1;
 }
 
                         </pre>
@@ -167,9 +166,9 @@
     <div id="stopka">
 
     </div>
-    <script src="motivetheme.js"></script>
+    <script src="motivetheme.js"></script> 
     <script src="script.js"></script>
-    <script src="scriptCopy.js"></script>
+    <script src="scriptCopy.js"></script> 
 </body>
-
 </html>
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link rel="stylesheet" href="cs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
+
 <body>
     <div class="nav" id="navid">
-        
+
         <div id="divdlaprzycisku">
             <input type="checkbox" class="checkbox" id="themeToggle" onchange="toggleTheme()">
             <label for="themeToggle" class="checkbox-label">
-                 <i class="fas fa-moon"></i>
+                <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
                 <span class="ball"></span>
             </label>
@@ -38,7 +40,7 @@
         Menu
     </span>
 
-    
+
     <div id="main">
         <h1>Lekcja 10. Wstęp do OOP</h1>
 
@@ -69,7 +71,8 @@
                 pomocy rzeczowników lub rzeczowników z przymiotnikami (zazwyczaj w liczbie
                 pojedynczej). Ponadto zaleca się, aby nazwy klas zaczynać się z dużej litery, a jeśli
                 nazwa ma kilka słów, kolejne słowa także powinny zaczynać się z dużej litery, np.
-                <b>WysokiCzlowiek</b>, jest to tak zwany <b>PascalCase</b>.</p>
+                <b>WysokiCzlowiek</b>, jest to tak zwany <b>PascalCase</b>.
+            </p>
 
         </div>
         <h2>Modyfikatory dostępu</h2>
@@ -87,7 +90,7 @@
         <h2>Tworzenie klasy</h2>
         <div class="console">
             <pre id="myInput">
-ModyfikatorDostepu class NazwaKlasy
+<span class="consolecolor">ModyfikatorDostepu</span> <span class="zmiennecolor">class</span> <span class="classcolor">NazwaKlasy</span>
 {
     Własności
     Metody
@@ -100,13 +103,13 @@ ModyfikatorDostepu class NazwaKlasy
         </div>
         <div class="console">
             <pre id="myInput1">
-public class Osoba
+<span class="deffunkcji">public</span> <span class="zmiennecolor">class</span> <span class="classcolor">Osoba</span>
 {
-    // własności klasy
-    public string Imie;
-    public string Nazwisko;
-    // metoda klasy
-    public void PustaMetodaKlasy()
+    <span class="komentarzcolor">// własności klasy</span>
+    <span class="deffunkcji">public</span> <span class="zmiennecolor">string</span> <span class="consolecolor">Imie</span>;
+    <span class="deffunkcji">public</span> <span class="zmiennecolor">string</span> <span class="consolecolor">Nazwisko</span>;
+    <span class="komentarzcolor">// metoda klasy</span>
+    <span class="deffunkcji">public</span> <span class="zmiennecolor">void</span> <span class="funkcjacolor">PustaMetodaKlasy</span>()
     }
     {
 }
@@ -122,4 +125,3 @@ public class Osoba
     <script src="scriptCopy.js"></script> 
 </body>
 </html>
-
